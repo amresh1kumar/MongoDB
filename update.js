@@ -1,17 +1,18 @@
-const dbConnect = require('./mongodb');
+const dbConnect = require('./ConfigMongodb');
 
 const updateData = async () => {
    let data = await dbConnect();
    let result = await data.updateMany(
       // for single or one data  update 
-   // let result = await data.updateOne(  
+      // let result = await data.updateOne(  
 
-      { name: 'note 5' }, {
-      $set: { name: 'max pro 6', price : 600}
-   }
+      { name: 'max pro 7' },
+      {
+         $set: { name: 'max pro 7', price: 10000 }
+      }
    );
    console.log(result)
 }
 
 
-updateData();
+updateData(); 

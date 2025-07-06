@@ -1,4 +1,4 @@
-const dbConnect = require('./mongodb')
+const dbConnect = require('./ConfigMongodb')
 
 // For read data from database
 
